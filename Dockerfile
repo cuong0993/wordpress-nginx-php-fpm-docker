@@ -5,7 +5,7 @@ WORKDIR /plugins
 RUN apk add -U unzip && apk add -U curl && rm -rf /var/cache/apk/*
 
 # https://wordpress.org/plugins/akismet/
-RUN mkdir -p tmp && curl https://downloads.wordpress.org/plugin/akismet.5.3.7.zip >> /tmp/akismet.zip
+RUN mkdir -p tmp && curl https://downloads.wordpress.org/plugin/akismet.5.5.zip >> /tmp/akismet.zip
 RUN ls /tmp/
 RUN unzip /tmp/akismet.zip -d /tmp/akismet
 RUN mv /tmp/akismet/* /plugins
