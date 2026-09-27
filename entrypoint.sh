@@ -24,7 +24,7 @@ if ! [ -f "/var/www/wp-content/wp-secrets.php" ]; then
     && [ ! $NONCE_SALT ]; then
         echo "Generating wp-secrets.php"
         # Generate secrets
-        curl -f https://api.wordpress.org/secret-key/1.1/salt/ >> /var/www/wp-content/wp-secrets.php
+        # curl -f https://api.wordpress.org/secret-key/1.1/salt/ >> /var/www/wp-content/wp-secrets.php
     fi
 fi
 exec "$@"
